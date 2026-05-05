@@ -14,6 +14,22 @@ helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs
     --set nfs.mountOptions[0]="nfsvers=3" \
     --set storageClass.name=previder-staas
 ```
+<details>
+  <summary>Using zsh?</summary>
+Make sure to escape square brackets.
+    
+```shell
+helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
+helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
+    --namespace previder-staas \
+    --create-namespace \
+    --set nfs.server=<NFS endpoint> \
+    --set nfs.path=<NFS path> \
+    --set nfs.mountOptions\[0\]="nfsvers=3" \
+    --set storageClass.name=previder-staas
+```
+</details>
+        
 The output of the command should look similar to this:
 ```text
 LAST DEPLOYED: 
