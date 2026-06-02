@@ -397,8 +397,7 @@ Preferably include:
 - the output of the Service
 
 You can collect the Service output with:
-```
-bash
+``` bash
 kubectl get service <service-name> -n <namespace> -o yaml
 ```
 Including this information helps Previder support investigate the issue more quickly.
