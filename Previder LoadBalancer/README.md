@@ -140,7 +140,7 @@ When using the load balancer type `TCP`, the traffic is always proxied which mak
 After enabling this annotation, the load balancer will use the PROXY protocol in its connections, which makes sure your pods will receive the original connection information even though the connection is proxied.
 
 To allow the PROXY protocol, often there needs to be a trusted load balancer IP configured.
-The trusted load-balancer IP for Previder is `100.70.0.3`.
+The trusted load balancer IP for Previder is `100.70.0.3`.
 
 Important: your application, ingress controller, or proxy must explicitly support PROXY protocol. If it does not, it may see unexpected data at the start of each TCP connection and fail to handle traffic correctly.
 Some examples and documentation are provided in the chapter [PROXY protocol examples](#proxy-protocol-examples).
@@ -252,7 +252,7 @@ spec:
 ### kubernetes.previder.nl/loadbalancer-san
 Using this option, a comma-separated list can be provided as extra SANs to become available. 
 
-During the experimental phase of the load balancer service, this option is not enabled.
+During the experimental phase of the load balancer service, this option is not available.
 
 ## Service status
 
@@ -387,7 +387,7 @@ kubectl logs -n kube-system -l app=cloud-provider-previder --all-containers --pr
 
 ### Contacting support
 
-If errors continue to occur, please contact Previder support and include the relevant troubleshooting information.
+If issues continue to occur, please contact Previder support and include the relevant troubleshooting information.
 
 Preferably include:
 
