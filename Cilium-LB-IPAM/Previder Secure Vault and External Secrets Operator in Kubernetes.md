@@ -306,7 +306,7 @@ kubectl -n hello-app get secret hello-app-db -o jsonpath='{.data.DB_PASSWORD}' |
 
 ---
 
-**Importend:**
+**Important:**
 - Use a separate Secure Vault **environment** per application or team that needs real isolation, tokens within the same environment are not restricted to specific secrets, so separate environments are what actually keeps secrets apart.
 - Within one environment, still give each application its own ReadOnly token and `SecretStore`, so access can be revoked and audited per application, just don't rely on this for isolation.
 - Manage secrets from the Vault Dashboard (or `vault-cli`) using the ReadWrite token, never from inside the cluster.
